@@ -1,0 +1,98 @@
+// $menuBg: #99b6d7; //#322f2f; //侧边及顶部
+// $headerBg: #69a3e3; //#f0f2f5;
+// $subMenuBg: #fff; //table mask
+// // 浅灰色color: #ababab;
+// //body背景色 hover背景色
+// // $menuHover: #fff;
+// // el-dialog
+// $menuHover: #4688d3; //#181515; //sideMenu hover
+// //input框填充色
+// $inputBorder: #808080;
+
+// //按钮、文字、橙色
+// $activeText: #1f6bb8;
+
+// //表格td文本色
+// $titleText: #333;
+
+// $inputInnerBg: #fff; //input框填充色
+
+// $modalBg: #fff; //#fff;
+
+// //表格背景色
+// $borderColor: #4e6c77;
+
+// // $tableHover: #213742; //tablehover
+// $tableHover: #f5f7fa; //tablehover
+
+// $bgColorMain: #fff; //table
+
+// $bgColorLabel: #fff; //table填充//
+
+// // 页面h2标题颜色
+// $h2ColorLabel: #4b5656;
+
+// $greyTxtColor: #8997a5;
+
+// $checkboxBordColor: #17497c; //选中颜色
+
+// $activeCheckbox: #17497c; // 激活边框
+
+// $borderNone: '1px solid #ccc'; //input框等设置无边框
+
+// $selectBgc: #f5f7fa;
+
+// $poppverBgc: inherit;
+
+// $itemColor: #fff;
+
+
+
+$menuBg: #25373f; //#322f2f; //侧边及顶部
+
+$headerBg: #25373f; //#f0f2f5;
+
+$subMenuBg: #25363e; //#fff; //table mask
+
+$menuHover: #37464e; //#181515; //hover
+
+
+$activeText: #ff8746; //#1f6bb8;
+
+//表格td文本色
+$titleText: #d3d6d8; //#333;
+
+$inputInnerBg: #19272e; //#fff; //input框填充色
+
+$modalBg: #37454e; //#fff;
+// $tableHover: #213742; //tablehover
+$tableHover: #25373f; //#f5f7fa; //tablehover
+
+$bgColorMain: #36464e; //#fff; //table
+
+$bgColorLabel: #2b3d44; //#fff; //table填充//
+
+// 页面h2标题颜色
+$h2ColorLabel: #bdc4c7; //#4b5656;
+
+$checkboxBordColor: #c55e26; //#17497c; //选中颜色
+
+$activeCheckbox: #a7562b; //#17497c; // 激活边框
+
+$borderNone: none !important; //'1px solid #ccc'; //input框等设置无边框
+
+$selectBgc: #25373f; //#f5f7fa;
+
+$poppverBgc: inherit;
+
+$greyTxtColor: #8997a5;
+//表格背景色
+$borderColor: #4e6c77;
+
+$inputBorder: #808080;
+
+$itemColor: #fff;
+
+:export {
+  activeText: $activeText;
+}
