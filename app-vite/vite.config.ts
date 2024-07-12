@@ -22,21 +22,21 @@ export default defineConfig({
           return `<script src="${publicPath}${fileName}"${attrs}></script>`;
         })
         .join('\n');
-    
+
       const links = (files.css || [])
         .map(({ fileName }) => {
           const attrs = makeHtmlAttributes(attributes.link);
           return `<link href="${publicPath}${fileName}" rel="stylesheet"${attrs}>`;
         })
         .join('\n');
-    
+
       const metas = meta
         .map((input) => {
           const attrs = makeHtmlAttributes(input);
           return `<meta${attrs}>`;
         })
         .join('\n');
-    
+
       return `<!doctype html>
         <html${makeHtmlAttributes(attributes.html)}>
           <head>
@@ -52,11 +52,19 @@ export default defineConfig({
         </html>`;
     }
   })],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://10.0.2.191:8310/',
+        changeOrigin: true
+      }
+    }
+  },
   build: {
     // assetsInlineLimit: 0, // 为了让图片单独打包
     target: "esnext",
     lib: {
-      name,
+      name: `${name}`,
       entry: 'src/main.ts',
       formats: ['umd'],
     },

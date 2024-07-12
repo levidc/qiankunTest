@@ -10,7 +10,7 @@ declare global {
 }
 
 interface IRenderProps {
-  container: Element|string;
+  container: Element | string;
 }
 
 
@@ -20,7 +20,7 @@ let history: RouterHistory;
 
 function render(props: IRenderProps) {
   const { container } = props;
-  history = createWebHistory((window as any).__POWERED_BY_QIANKUN__ ? '/app-vue-vite' : '/');
+  history = createWebHistory((window as any).__POWERED_BY_QIANKUN__ ? '/dbs' : '/');
   router = createRouter({
     history,
     routes,
@@ -28,7 +28,7 @@ function render(props: IRenderProps) {
 
   instance = createApp(AppCom);
   instance.use(router);
-  instance.mount(typeof(container) === 'string' ? container : (container.querySelector("#app") as Element));
+  instance.mount(typeof (container) === 'string' ? container : (container.querySelector("#app") as Element));
 }
 
 if (!(window as any).__POWERED_BY_QIANKUN__) {
@@ -36,16 +36,17 @@ if (!(window as any).__POWERED_BY_QIANKUN__) {
 }
 
 export async function bootstrap() {
-  console.log('%c ', 'color: green;', 'vue3.0 app bootstraped');
+  console.log('%c vue3.0 app bootstraped', 'color: green;');
 }
 
 export async function mount(props: any) {
+  console.log(props, '1233')
   render(props);
 }
 
 export async function unmount() {
   instance.unmount();
-  if(instance._container){
+  if (instance._container) {
     instance._container.innerHTML = '';
   }
   history.destroy();

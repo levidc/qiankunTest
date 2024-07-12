@@ -5,6 +5,16 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    proxy: {
+      '/api/': {
+        target: 'http://10.0.2.191:8310/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '' // 这里理解成用‘/api’代替target里面的地址，组件中我们调接口时直接用/api代替
+          // 比如我要调用'http://0.0:300/user/add'，直接写‘/api/user/add’即可 代理后地址栏显示/
+        }
+      }
+    }
   },
   chainWebpack: (config) => {
     config.module
